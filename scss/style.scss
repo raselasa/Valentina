@@ -1,0 +1,627 @@
+/* Color Variables */
+$pcolor: #444444;
+$pink:#d50a51;
+$dark: #000000;
+$psize:16px;
+$bsize: 20px;
+
+
+/*================ Basic CSS Style =============*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a,a:hover,a:visited,a:focus,a,:active{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: red;
+}
+
+.all-btn{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    border: 1px solid $pink;
+    border-radius: 25px;
+    color: $pink;
+    transition: all .5s linear;
+    display: inline-block;
+}
+.all-btn:hover{
+    background: $pink;
+    color: #f1f1f1;
+}
+
+.title{
+    h3{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 24px;
+        color: $pcolor;
+        text-transform: capitalize;
+    }
+    h2{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 32px;
+        color: $pink;
+        text-transform: capitalize; 
+        margin-bottom: 30px;
+    }
+}
+p.details{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $pcolor;
+}
+
+/* title icon*/
+.title-icon1{
+    position: relative;
+}
+.title-icon1::after{
+    position: absolute;
+    top: -25px;
+    left: -50px;
+    width:100px;
+    height: auto;
+    content: url(../images/love-bg.png);
+}
+.title-icon2{
+    position: relative;
+}
+.title-icon2::after{
+    position: absolute;
+    top: -25px;
+    right: -50px;
+    width:100px;
+    height: auto;
+    content: url(../images/love-bg3.png);
+}
+
+
+/*================ NAVBAR PART =============*/
+nav {
+    position: fixed !important;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+    background: url("../images/banner.jpg") no-repeat bottom;
+    background-size: cover;
+    .login li button{
+        border: 1px solid $pink;
+        border-radius: 25px;
+        padding: 8px 20px;
+        font-size: $bsize;
+        color: #f1f1f1;
+        background: $pink;
+        transition: all .4s linear ;
+    }
+    .main li{
+        padding: 0 10px;
+        text-align: center;
+        a{
+            font-size: 1rem;
+            color: $dark;
+            transition: all .4s linear;
+            position: relative;
+        }
+        a:hover{
+            color: $pink;
+        }
+        a::before{
+            content: url("../images/hover-img.png");
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            transition: all .4s linear;
+            opacity: 0;
+        }
+        a:hover::before{
+            opacity: 1;
+        }
+    }
+}
+/*================ Banner =============*/
+#banner{
+    margin-top: 60px;
+    background: url(../images/banner.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    .img{
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .text h3{
+        color: #8a5e3b;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 60px;
+        text-transform: uppercase;
+        margin-top: 150px;
+    }
+    .text h1{
+        font-family: 'Great Vibes', cursive;
+        font-size: 80px;
+        color: $pink;
+        margin-top: -25px;
+        margin-bottom: 15px;
+    }
+    .text p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: $pcolor;
+        text-align: center !important;
+        margin-bottom: 45px;
+        line-height: 26px;
+    }
+}
+/*================ History Section =============*/
+#history {
+    padding: 90px 0 90px 0;
+    .img{
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+                }
+    }
+}
+/*================ Gift Section =============*/
+#gift{
+    padding: 60px 0 30px 0;
+    background: #fff6da;
+    .img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        img{
+            position: absolute;
+            top: -109px;
+            left: 0px;
+            width: 90%;
+            height: auto;
+        }
+    }
+}
+/*================ Ticket Section =============*/
+#ticket {
+    padding: 90px 0px 30px 0px;
+    .img{
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+/*================  =============*/
+#offers{
+    background: #fef7fa;
+    padding: 60px 0px 30px 0px;
+    .items{
+        padding: 10px 0px 5px 0px;
+        .item{
+            padding: 20px 10px 10px 10px;
+            -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.0);
+            -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.0);
+            box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.0);
+            border-right: 3px solid transparent;
+            transition: all .5s linear;
+            h2{
+                font-size: 20px;
+                margin-top: 20px;
+            }
+        }
+        .item:hover{
+            -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.45);
+            -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.45);
+            box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.45);
+            border-right: 3px solid $pink;
+        }
+    }
+}
+/*================ captures & shoots Section =============*/
+#captures{
+    padding: 90px 0px 30px 0px;
+    .items{
+        .item{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin: 10px 0;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .overlay{
+                position: absolute;
+                background: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: scale(0);
+                transition: all .4s linear;
+                .icon{
+                    width: 40px;
+                    height: auto;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    a{
+                        i{
+                            color: #f1f1f1 !important;
+                            font-size: 16px;
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            border: 1px solid #ffffff;
+                            border-radius: 50%;
+                            text-align: center;
+                            margin: 10px 0;
+                            transition: .4s;
+                        }
+                        i:hover{
+                            background: $pink;
+                            border-color: $pink;
+                        }
+                    }
+                }
+                .icon-engagment{
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    font-size: 13px;
+                    h2{
+                        font-size: 18px;
+                    }
+                }
+            }
+
+        }
+        .item:hover .overlay{
+            transform: scale(1);
+        }
+    }
+}
+/*================ Counter Section =============*/
+#counter{
+    background: url("../images/counter-bg.jpg") no-repeat center;
+    background-size: cover;
+    h2{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: $pink;
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+    h3{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: $pcolor;
+        text-transform: capitalize;
+    }
+}
+/*================ Proposal Section =============*/
+#proposal{
+    padding: 30px 0px 90px 0px;
+    .prev{
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translateX(-50%);
+        cursor: pointer;
+        font-size: 30px;
+        transition: all .4s linear;
+    }
+    .prev:hover{
+        color: $pink;
+    }
+    .next {
+        position: absolute;
+        top: 50%;
+        right: -60px;
+        transform: translateX(-50%);
+        cursor: pointer;
+        transition: all .4s linear;
+        font-size: 30px;
+    }
+    .next:hover{
+        color: $pink;
+    }
+    .item{
+        padding: 0px 5px;
+        .main{
+            background: #fffae2;
+            padding: 30px 20px;
+            .img{
+                width: 100%;
+                height: auto;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 50%;
+                }
+            }
+            .text-area{
+                h3{
+                    font-size: 20px;
+                    color: $dark;
+                    margin-top: 30px
+                }
+                p.designation{
+                    color: #9b9b9b;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+/*================ Footer-Section =============*/
+#footer{
+    position: relative;
+    width: 100%;
+    background: url("../images/banner.jpg");
+    .news-form{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: -75px;
+        left: 0;
+        color: #f1f1f1;
+        .main-form{
+            width: 100%;
+            background: $pink;
+            border-radius: 100px;
+            padding: 0 150px;
+            form{
+                padding: 17px 0;
+            }
+            .icon {
+                position: relative;
+            }
+            i.big-icon{
+                font-size: 50px;
+                position: absolute;
+                top: 5px;
+                left: -70px;
+            }
+            h2{
+                font-size: 40px;
+                transform: uppercase;
+            }
+            p{
+                color: #f1f1f1 !important;
+            }
+        }
+    }
+    .address{
+        li{
+            display: inline-block;
+            i{
+                font-size: 20px;
+                color: #f1f1f1;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                background: $pink;
+            }
+            p a{
+                color: $pcolor;
+                font-size: 15px;
+                font-family: 'Open Sans', sans-serif;
+            }
+        }
+        li:first-child{
+            margin-right: 18px;
+        }
+    }
+    .footer-icon i{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid $pink;
+        border-radius: 50px;
+        text-align: center;
+        margin-right: 15px;
+        color: $pink;
+        font-size: 20px;
+        transition: all .4s linear;
+    }
+    .footer-icon i:hover{
+        color: #f1f1f1;
+        background: $pink;
+    }
+    .footer-head h2{
+        font-size: 20px;
+        color: $pink;
+        font-weight: 700;
+    }
+}
+/*================ Footer-Bottom =============*/
+#footer-bottom{
+    padding: 20px 0;
+    background: #fffae2;
+    p{
+        font-size: 16px;
+        color: $pcolor;
+        a{
+            color: $pink;
+        }
+    }
+} 
+
+
+/* =================== Responsive All Device ============*/
+
+/*== Extra Small Device ==*/
+@media (max-width: 575.98px){
+    /*== BANNER ==*/
+    #banner .text h3{
+        padding-top: 60px;
+    }
+    // Footer
+    #footer .footer-margin{
+        padding: 60px 0px 0px 0px !important;
+    
+    }
+    #footer .news-form .main-form {
+        padding: 30px 10px 30px 10px !important;
+        border-radius: 10px;
+    }
+    #footer .news-form .main-form i.big-icon{
+        display: none;
+    }
+    // gift 
+    #gift .img img {
+        display: none;
+    }
+}
+
+
+/*== Small Device ==*/
+@media (max-width: 767.98px){
+    // Banner
+#banner .text h3{
+    font-size: 34px !important;
+    margin-top: 10px !important;
+}
+#banner .text h1{
+    font-size: 45px !important;
+    margin-top: -13px;
+}
+#banner .text p{
+    margin-bottom: 30px;
+}
+// gift 
+#gift .img img {
+	position: absolute;
+	top: -540px;
+	left: 310px;
+	width: 40%;
+	height: auto;
+}
+
+    // Footer
+    #footer .footer-margin{
+        padding: 60px 0px 0px 0px !important;
+    
+    }
+    #footer .news-form .main-form {
+        padding: 30px 15px 20px 15px !important;
+        border-radius: 10px;
+    }
+    #footer .news-form .main-form i.big-icon{
+        display: none;
+    }
+
+}
+
+
+/*== Medium Device ==*/
+@media(max-width:991.98px){
+/*== Navbar ===*/
+nav ul{
+    text-align: center;
+}
+nav ul.main{
+    margin: auto !important;
+    width: 120px;
+    padding-bottom: 30px;
+    li{
+        margin: 5px 0 0 0;
+    }
+}
+nav .login{
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+}
+
+// Banner
+#banner .text h3{
+    font-size: 48px;
+    margin-top: 10px !important;
+}
+#banner .text h1{
+    font-size: 60px;
+}
+// footer
+#footer .footer-margin{
+    padding-top: 60px !important;   
+}
+#footer .news-form .main-form{
+    border-radius: 0;
+}
+
+
+
+}
+
+
+
+/*== Large Device ==*/
+@media (max-width: 1199.98px){
+    // nav bar
+    nav{
+        .main li{
+            padding: 0 5px;
+        }
+    }
+
+    // banner
+#banner{
+    padding: 30px 0px 60px 0px;
+}
+#banner .text h3 {
+    margin-top: 90px;
+}
+
+// Footer 
+#footer .mx-5{
+    margin: 0 !important;
+}
+#footer .news-form .main-form{
+    padding: 30px 30px 30px 75px !important;
+}
+
+}
+
+
+/*================  =============*/
+/*================  =============*/
+/*================  =============*/
+/*================  =============*/
+/*================  =============*/
